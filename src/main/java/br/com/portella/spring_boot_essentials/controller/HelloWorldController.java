@@ -22,10 +22,21 @@ public class HelloWorldController {
     public ResponseEntity<String> helloWorld(){
         return ResponseEntity.ok("bobao games");
     }
-    */
+
 
     @PostMapping
         public ResponseEntity<String> helloWorld(){
             return new ResponseEntity<>("atumalaca", HttpStatus.CREATED);
+
+     */
+
+    @GetMapping
+    public ResponseEntity<String> helloWorld(){
+        return new ResponseEntity<>("bobao games get", HttpStatus.OK);
+    }
+
+    @PostMapping
+    public ResponseEntity<String> helloWorldPost(){
+        return new ResponseEntity<>("bobao games post", HttpStatus.CREATED);
     }
 }
